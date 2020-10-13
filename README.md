@@ -1,3 +1,3 @@
 # Portfolio
-Project is live at ->manavarora.codes
+Project is live at ->http://manavarora.codes/
 
