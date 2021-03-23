@@ -1,3 +1,2 @@
 # Portfolio
-http://manavarora.codes/
-
+www.manavarora.codes
