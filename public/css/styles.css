@@ -284,46 +284,6 @@ font-family: 'Kufam', cursive;
   overflow: hidden;
 }
 
-.card {
-  background-color: var(--background);
-  display: block;
-  width: 300px;
-  min-height: 90px;
-  border: 3px solid var(--primary);
-  padding: 15px;
-  margin: 100px auto 100px auto;
-  box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--green),
-        20px -20px 0 -3px var(--background), 20px -20px var(--yellow), 
-        30px -30px 0 -3px var(--background), 30px -30px var(--orange), 
-        40px -40px 0 -3px var(--background), 40px -40px var(--red); 
-  transition: box-shadow 1s, top 1s, left 1s;
-  position: relative;
-  top: 0;
-  left: 0;
-  cursor: pointer;
-}
-
-.card:hover {
-  top: -40px;
-  left: 40px;
-  box-shadow: 0 0 0 -3px var(--background), 0 0 0 0 var(--green),
-      0 0 0 -3px var(--background), 0 0 0 0  var(--yellow),
-      0 0 0 -3px var(--background), 0 0 0 0  var(--orange),
-      0 0 0 -3px  var(--background), 0 0 0 0  var(--red);
-}
-
-
-
-:root {
-  --primary: #555BFF;
-  --secondary: #22D2A0;
-  --background: white;
-  --green: #1FC11B;
-  --yellow: #FFD913;
-  --orange: #FF9C55;
-  --red: #FF5555;
-} 
-
 
 .card p {
   font-size: 11px;
@@ -337,9 +297,6 @@ font-family: 'Kufam', cursive;
   font-family: "Archivo Black", "Archivo", sans-serif;
   font-weight: normal;
 }
-
-
-
 
 .footer-distributed{
 	background: #666;
@@ -500,7 +457,6 @@ font-family: 'Kufam', cursive;
 	margin-bottom: 5px;
 }
 
-/* If you don't want the footer to be responsive, remove these media queries */
 
 @media (max-width: 880px) {
 
@@ -523,63 +479,93 @@ font-family: 'Kufam', cursive;
 
 }
 
-.brand{
-	display: flex;
-  margin-top: 50px;
-	align-items: center;
-	justify-content: center;
-	font-family: 'Carter One', cursive;
-}
-.content{
-	position: relative;
-	margin-top: 50px;
-}
-.content h2{
-	color: #fff;
-	font-size: 8em;
-	position: absolute;
-	transform: translate(-50%, -100%);
-}
-.content h2:first-child{
-	color: transparent;
-	-webkit-text-stroke:2px #06a4d4;
-}
-.content h2:last-child{
-	color: #06a4d4;
-	animation: animate 4s ease-in-out infinite;
+.typewriter h1 {
+  color: #000;
+  font-size: 70px;
+  font-family: monospace;
+  overflow: hidden; 
+  white-space: nowrap; 
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: 
+    typing 5s steps(100, end),
+    blink-caret .5s step-end infinite;
 }
 
-@keyframes animate{
-	0%,
-	100%{
-		clip-path: polygon(
-			0% 45%,
-			16% 44%,
-			33% 50%,
-			54% 60%,
-			70% 61%,
-			84% 59%,
-			100% 52%,
-			100% 100%,
-			0% 100%
-			);
-	}
-	50%{
-		clip-path: polygon(
-			0% 60%,
-			15% 65%,
-			34% 66%,
-			51% 62%,
-			67% 50%,
-			84% 45%,
-			100% 46%,
-			100% 100%,
-			0% 100%
-			);
-	}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
 }
 
-.text-p{
-  color: #06a4d4;
-  font-size: 20px;
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.container-card {
+  display: block;
+  margin: 0px 20px;
+}
+
+.parent-card {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.wave-card {
+  width: 250px;
+  height: 300px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: end;
+  align-items: center;
+  position: relative;
+  box-shadow: 11px 17px 48px #e5e5e5;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.wave-card-shape {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  z-index: 1;
+  opacity: 0.6;
+  top: -250px;
+  left: -100px;
+  border-radius: 150px;
+  background: #ffd600;
+  animation: rotate 30s linear infinite;
+}
+.wave-card-shape:nth-child(1) {
+  top: -245px;
+  left: -98px;
+  opacity: 0.4;
+  z-index: 2;
+  animation: rotate 25s linear infinite;
+}
+.wave-card-shape:nth-child(2) {
+  top: -240px;
+  opacity: 0.3;
+  z-index: 3;
+  animation: rotate 32s linear infinite;
+}
+.wave-card-subtitle {
+  margin-bottom: 30px;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(1turn);
+  }
 }
