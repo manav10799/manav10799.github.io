@@ -2,6 +2,9 @@
 .navbar{
     background-color:#f7f6e9;
     transition: top 0.3s;
+    position: sticky;
+    top: 0;
+    z-index: 99;
 }
 .nav_icon{
     border-radius: 40px;
