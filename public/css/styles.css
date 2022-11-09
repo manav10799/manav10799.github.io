@@ -545,3 +545,16 @@ font-family: 'Kufam', cursive;
     font-size: 20px;
   }
 }
+
+.deprecated-body {
+  display: none;
+}
+
+.main-body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2233;
+}
